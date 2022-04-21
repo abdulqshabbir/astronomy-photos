@@ -1,0 +1,141 @@
+:root {
+    --primary-white: hsl(0, 0%, 90%);
+    --primary-gray: hsl(0, 0%, 41%);
+    --primary-black: hsl(0, 0%, 8%);
+    --primary-yellow: rgb(221, 195, 81);
+    --font-size: 18px;
+}
+
+/*
+    Mobile menu styling
+*/
+
+.mobile__left {
+    display: none;
+}
+
+.mobile__right {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header__left {
+        display: none;
+    }
+    .header__right {
+        display: none;
+    }
+    .mobile__left {
+        display: block;
+    }
+    .mobile__right {
+        display: block;
+    }
+}
+
+.body {
+    background: var(--primary-white);
+    color: var(--primary-black);
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-gray);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 3.5rem;
+    padding: 0 3rem;
+}
+
+.header__left{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__left-NASA-logo{
+    margin-right: 4rem;
+}
+
+.header__left-link {
+    margin-right: 3rem;
+}
+
+.header_left-links li {
+    margin-right: 2rem;
+}
+
+.header__right{}
+
+.header__right-register{
+    margin-left: 2rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px var(--primary-gray) solid;
+    border-radius: 0.5rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem;
+}
+
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+.main__left{
+    margin: 2rem;
+}
+
+.main__left-title{
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+.main__left-description{
+    margin: 2rem 0;
+    color: var(--primary-gray);
+    line-height: 1.6;
+}
+.main_left-button{
+    border: 1px solid black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.7rem;
+    background: var(--primary-black);
+    color: var(--primary-white);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.main__right{
+    margin: 2rem;
+}
+.main__right-image{
+    width: 400px;
+}
