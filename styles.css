@@ -111,10 +111,11 @@ a {
 
 .main__left{
     margin: 2rem;
+    width: 100%;
 }
 
 .main__left-title{
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 400;
     font-family: "Roboto", sans-serif;
 }
@@ -138,4 +139,47 @@ a {
 }
 .main__right-image{
     width: 400px;
+    height: 400px;
+    object-fit: cover;
+    outline: none;
+    border-style: none;
+}
+
+.image-skeleton {
+    width: 400px;
+    height: 400px;
+    animation: loading linear 1s infinite alternate;
+}
+
+.h1-skeleton {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    animation: loading linear 1s infinite alternate;
+}
+
+.h1-skeleton:nth-child(2){
+    width: 50%;
+}
+
+.p-skeleton {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 12px;
+    animation: loading linear 1s infinite alternate;
+}
+
+.p-skeleton:last-of-type {
+    width: 80%;
+    height: 20px;
+    margin-bottom: 12px;
+    animation: loading linear 1s infinite alternate;
+}
+@keyframes loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
 }
