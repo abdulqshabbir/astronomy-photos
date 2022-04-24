@@ -6,33 +6,6 @@
     --font-size: 18px;
 }
 
-/*
-    Mobile menu styling
-*/
-
-.mobile__left {
-    display: none;
-}
-
-.mobile__right {
-    display: none;
-}
-
-@media (max-width: 700px) {
-    .header__left {
-        display: none;
-    }
-    .header__right {
-        display: none;
-    }
-    .mobile__left {
-        display: block;
-    }
-    .mobile__right {
-        display: block;
-    }
-}
-
 .body {
     background: var(--primary-white);
     color: var(--primary-black);
@@ -50,6 +23,7 @@ button {
 
 a {
     text-decoration: none;
+    cursor: default;
     color: var(--primary-gray);
 }
 
@@ -65,15 +39,23 @@ a {
     justify-content: space-between;
     align-items: center;
     min-height: 3.5rem;
-    padding: 0 3rem;
+    padding: 1rem 6rem;
 }
 
 .header__left{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .header__left-NASA-logo{
+    font-size: 2rem;
     margin-right: 4rem;
 }
 
@@ -84,8 +66,6 @@ a {
 .header_left-links li {
     margin-right: 2rem;
 }
-
-.header__right{}
 
 .header__right-register{
     margin-left: 2rem;
@@ -124,7 +104,7 @@ a {
     color: var(--primary-gray);
     line-height: 1.6;
 }
-.main_left-button{
+.main__left-button{
     border: 1px solid black;
     padding: 0.75rem 1.5rem;
     border-radius: 0.7rem;
@@ -132,6 +112,13 @@ a {
     color: var(--primary-white);
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+}
+
+.main__left-button:hover {
+    background: var(--primary-gray);
+    border: 1px solid var(--primary-gray);
+    scale: 110%;
+    transition: all 0.1s linear;
 }
 
 .main__right{
@@ -181,5 +168,61 @@ a {
     }
     100% {
         background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.mobile__left {
+    display: none;
+}
+
+.mobile__right {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 3.5rem;
+        padding: 1rem 4rem;
+    }
+
+    .header__left {
+        display: none;
+    }
+    .header__right {
+        display: none;
+    }
+    .mobile__left {
+        display: block;
+    }
+    .mobile__left-NASA-logo {
+        font-size: 2rem;
+    }
+    .mobile__right {
+        display: block;
+    }
+    .main__right-image {
+        width: 300px;
+        height: 300px;
+    }
+    .main {
+        margin-top: 0;
+    }
+    .main__left-button {
+        border: 1px solid black;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.7rem;
+        background: var(--primary-black);
+        color: var(--primary-white);
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size:1.2rem;
+        width: 100%;
+        margin: 0 auto;
+        height: 4rem;
     }
 }
